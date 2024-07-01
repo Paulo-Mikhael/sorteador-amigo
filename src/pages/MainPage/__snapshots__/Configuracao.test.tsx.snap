@@ -2,8 +2,24 @@
 
 exports[`configuração da Main page a pagina principal deve ser assim 1`] = `
 <div>
-  <form>
+  <h1
+    class="sc-dcJtft dbEgea"
+  >
+    Vamos Começar!
+  </h1>
+  <form
+    class="sc-aYaIB hNOGfC"
+  >
+    <label
+      for="input-adicionar"
+    >
+      <img
+        alt="adicionar usuário"
+        src="images/adicionar.png"
+      />
+    </label>
     <input
+      id="input-adicionar"
       placeholder="Insira os nomes dos participantes"
       type="text"
       value=""
@@ -13,15 +29,27 @@ exports[`configuração da Main page a pagina principal deve ser assim 1`] = `
     >
       Adicionar
     </button>
-    
   </form>
-  <ul />
-  <footer>
+  
+  <ul
+    class="sc-eqUzNf lcovKd"
+  />
+  <footer
+    class="sc-fqkwJk hDouWI"
+  >
     <button
       disabled=""
     >
+      <img
+        alt="ícone de reproduzir"
+        src="images/img-botao.png"
+      />
       Iniciar brincadeira
     </button>
+    <img
+      alt="sacolas"
+      src="images/sacolas.png"
+    />
   </footer>
 </div>
 `;
