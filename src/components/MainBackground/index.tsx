@@ -4,12 +4,12 @@ import styled from "styled-components";
 const StyledMain = styled.main`
   background-color: white;
   width: 99.7%;
-  height: 557px;
+  height: auto;
   border-radius: 60px 60px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 87px;
+  padding: 87px 0px;
   border: 2px solid black;
   z-index: 0;
 `
