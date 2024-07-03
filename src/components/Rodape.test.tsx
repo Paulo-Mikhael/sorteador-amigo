@@ -3,17 +3,23 @@ import { RecoilRoot } from "recoil";
 import Rodape from "./Rodape";
 import { useListaParticipantes } from "../state/hooks/useListaParticipantes";
 
-jest.mock('../state/hooks/useListaParticipantes', () => { //O Jest "importa" este diretório
+jest.mock('../state/hooks/useListaParticipantes', () => { //O Jest "importa" esse diretório
   return {
     useListaParticipantes: jest.fn() //useListaParticipantes é uma função "mockada" para teste
   };
 });
 
 const mockNavegacao = jest.fn();
+const mockSorteador = jest.fn();
 
 jest.mock('react-router-dom', () => { //O Jest "importa" a lib react-router-dom
   return {
     useNavigate: () => mockNavegacao //useNavigate é uma função "mockada" para teste
+  };
+});
+jest.mock('../state/hooks/useSorteador', () => { //O Jest "importa" o diretório especificado
+  return {
+    useSorteador: () => mockSorteador //useNavigate é uma função "mockada" para teste
   };
 });
 
@@ -45,5 +51,6 @@ describe('onde existem participantes suficientes', () => {
     fireEvent.click(botao);
     expect(mockNavegacao).toHaveBeenCalledTimes(1);
     expect(mockNavegacao).toHaveBeenCalledWith('/sorteio');
+    expect(mockSorteador).toHaveBeenCalledTimes(1);
   });
 });

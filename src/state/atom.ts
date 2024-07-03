@@ -9,3 +9,8 @@ export const erroState = atom<string>({
   key: 'erroState',
   default: ""
 });
+
+export const sorteioState = atom<Map<string, string>>({
+  key: 'sorteioState',
+  default: new Map()
+});

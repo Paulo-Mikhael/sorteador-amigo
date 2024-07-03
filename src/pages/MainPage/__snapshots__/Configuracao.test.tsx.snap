@@ -3,7 +3,7 @@
 exports[`configuração da Main page a pagina principal deve ser assim 1`] = `
 <div>
   <h1
-    class="sc-dcJtft dbEgea"
+    class="sc-iGgVNO hZfVeL"
   >
     Vamos Começar!
   </h1>
@@ -35,10 +35,12 @@ exports[`configuração da Main page a pagina principal deve ser assim 1`] = `
     class="sc-eqUzNf lcovKd"
   />
   <footer
-    class="sc-fqkwJk hDouWI"
+    class="sc-dcJtft hmBCgn"
   >
     <button
+      class="sc-fqkwJk hJxqmN"
       disabled=""
+      type="button"
     >
       <img
         alt="ícone de reproduzir"
