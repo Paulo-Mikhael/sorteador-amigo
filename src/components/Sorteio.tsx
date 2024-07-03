@@ -49,6 +49,15 @@ const StyledForm = styled.form`
   button{
     margin: 25px 0px;
   }
+
+  @media screen and (max-width: 600px){
+    select{
+      width: 340px;
+    }
+    p{
+      width: 340px;
+    }
+  }
 `
 
 const Sorteio = () => {
@@ -60,6 +69,9 @@ const Sorteio = () => {
     evt.preventDefault();
     if (resultado.has(participanteDaVez)) {
       setAmigoSecreto(resultado.get(participanteDaVez)!);
+      setTimeout(() => {
+        setAmigoSecreto('');
+      }, 5000);
     }
   }
 

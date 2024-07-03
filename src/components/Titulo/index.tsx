@@ -6,6 +6,7 @@ const StyledH1 = styled.h1`
   font-size: 32px;
   color: #4B69FD;
   margin-bottom: 36px;
+  text-align: center;
 `
 
 const Titulo = ({ children }: { children: React.ReactNode }) => {

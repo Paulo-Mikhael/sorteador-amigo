@@ -9,6 +9,15 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: end;
+
+  @media screen and (max-width: 900px){
+    width: 100%;
+  }
+  @media screen and (max-width: 600px){
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 `
 
 const Rodape = () => {

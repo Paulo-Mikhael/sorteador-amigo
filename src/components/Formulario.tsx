@@ -3,7 +3,7 @@ import { useAdicionarParticipante } from "../state/hooks/useAdicionarParticipant
 import { useMensagemDeErro } from "../state/hooks/useMensagemDeErro";
 import styled from "styled-components";
 
-const StyledForm = styled.form`
+const StyledForm = styled.form<{ $formVazio: boolean }>`
   background-color: white;
   border-radius: 37.5px;
   display: flex;
@@ -22,7 +22,7 @@ const StyledForm = styled.form`
     border-radius: 0px 37.5px 37.5px 0px;
     width: 200px;
     color: black;
-    cursor: pointer;
+    cursor: ${props => props.$formVazio === true ? 'not-allowed' : 'pointer'};
   }
   input{
     width: 500px;
@@ -37,6 +37,33 @@ const StyledForm = styled.form`
   img{
     margin-left: 20px;
     width: 24px;
+  }
+
+  @media screen and (max-width: 900px){
+    flex-direction: column;
+    border: none;
+    box-shadow: none;
+    gap: 20px;
+    width: 70%;
+    position: relative;
+
+    button, input{
+      border: 2px solid black;
+      box-shadow: 4px 4px 0px black;
+      border-radius: 37.5px;
+    }
+    input{
+      width: 100%;
+      padding-left: 60px;
+    }
+    button{
+      font-size: 25px;
+    }
+    img{
+      position: absolute;
+      left: -40px;
+      top: 48px;
+    }
   }
 `
 const StyledP = styled.p`
@@ -60,7 +87,7 @@ const Formulario = () => {
 
   return (
     <>
-      <StyledForm onSubmit={(evt: React.FormEvent<HTMLFormElement>) => adicionarParticipante(evt)}>
+      <StyledForm $formVazio={!nome} onSubmit={(evt: React.FormEvent<HTMLFormElement>) => adicionarParticipante(evt)}>
         <label htmlFor="input-adicionar">
           <img src="images/adicionar.png" alt="adicionar usuário" />
         </label>
@@ -68,7 +95,9 @@ const Formulario = () => {
           id="input-adicionar"
           ref={inputRef}
           value={nome}
-          onChange={(evt) => setNome(evt.target.value)}
+          onChange={(evt) => {
+            setNome(evt.target.value)
+          }}
           type="text"
           placeholder="Insira os nomes dos participantes"
         />

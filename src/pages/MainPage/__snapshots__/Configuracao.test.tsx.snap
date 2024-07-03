@@ -3,12 +3,12 @@
 exports[`configuração da Main page a pagina principal deve ser assim 1`] = `
 <div>
   <h1
-    class="sc-iGgVNO hZfVeL"
+    class="sc-iGgVNO bwYlAa"
   >
     Vamos Começar!
   </h1>
   <form
-    class="sc-aYaIB hNOGfC"
+    class="sc-aYaIB hwTGNB"
   >
     <label
       for="input-adicionar"
@@ -35,7 +35,7 @@ exports[`configuração da Main page a pagina principal deve ser assim 1`] = `
     class="sc-eqUzNf lcovKd"
   />
   <footer
-    class="sc-dcJtft hmBCgn"
+    class="sc-dcJtft kOwNss"
   >
     <button
       class="sc-fqkwJk hJxqmN"
